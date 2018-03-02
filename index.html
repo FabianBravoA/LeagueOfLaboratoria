@@ -28,6 +28,7 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
+
     <script>
         // Initialize Firebase
         var config = {
@@ -35,7 +36,7 @@
             authDomain: "leagueoflaboratoria.firebaseapp.com",
             databaseURL: "https://leagueoflaboratoria.firebaseio.com",
             projectId: "leagueoflaboratoria",
-            storageBucket: "",
+            storageBucket: "leagueoflaboratoria.appspot.com",
             messagingSenderId: "391057320118"
         };
         firebase.initializeApp(config);
@@ -44,8 +45,9 @@
 
 <body>
     <h1>League of Laboratoria</h1>
-    <input type="button" onclick="facebookLogin()">Login con Facebook</input>
+    <input type="button" onclick="facebookLogin()" value="Login con Facebook">
     <div id="champions"></div>
+    <input id="upload-file-selector" type="file" accept="image/x-png, image/gif, image/jpeg" onchange="uploadFile()">
 
     <script src="assets/app.js"></script>
 </body>
